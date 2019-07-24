@@ -33,8 +33,6 @@ public class ServerHandlerDemo extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-        System.out.println(this);
-        System.out.println(cg);
         cg.add(ctx.channel());
         System.out.println("handlerAdded\t"+ctx.channel().remoteAddress());
     }
