@@ -10,8 +10,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class ServerDemo {
 
     public static void main(String[] args) {
-        EventLoopGroup boosGroup = new NioEventLoopGroup();
-        EventLoopGroup workerGroup = new NioEventLoopGroup();
+        EventLoopGroup boosGroup = new NioEventLoopGroup();//接收连接注册到workerGroup
+        EventLoopGroup workerGroup = new NioEventLoopGroup();//注册连接
 
         try{
             ServerBootstrap bootstrap = new ServerBootstrap();
